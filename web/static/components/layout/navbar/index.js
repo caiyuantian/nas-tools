@@ -9,18 +9,21 @@ import {CustomElement, Golbal} from "../../utility/utility.js";
 const navbar_list = [
   {
     name: "我的媒体库",
+    level: 1,
     page: "index",
-    icon: html`
+    icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><polyline points="5 12 3 12 12 3 21 12 19 12"></polyline><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"></path></svg>
     `,
   },
   {
     name: "探索",
+    level: 1,
     list: [
       {
         name: "榜单推荐",
+        level: 1,
         page: "ranking",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/align-box-bottom-center.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-align-box-bottom-center" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -33,8 +36,9 @@ const navbar_list = [
       },
       {
         name: "豆瓣电影",
+        level: 1,
         page: "douban_movie",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/movie.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -51,8 +55,9 @@ const navbar_list = [
       },
       {
         name: "豆瓣电视剧",
+        level: 1,
         page: "douban_tv",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/device-tv.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-tv" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -63,8 +68,9 @@ const navbar_list = [
       },
       {
         name: "TMDB电影",
+        level: 1,
         page: "tmdb_movie",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/movie.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -81,8 +87,9 @@ const navbar_list = [
       },
       {
         name: "TMDB电视剧",
+        level: 1,
         page: "tmdb_tv",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/device-tv.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-tv" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -93,8 +100,9 @@ const navbar_list = [
       },
       {
         name: "BANGUMI",
+        level: 1,
         page: "bangumi",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/device-tv-old.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-tv-old" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -110,25 +118,29 @@ const navbar_list = [
   },
   {
     name: "资源搜索",
+    level: 1,
     page: "search",
-    icon: html`
+    icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><circle cx="10" cy="10" r="7"></circle><line x1="21" y1="21" x2="15" y2="15"></line></svg>
     `,
   },
   {
     name: "站点管理",
+    level: 1,
     list: [
       {
         name: "站点维护",
+        level: 1,
         page: "site",
-        icon: html`
+        icon: `
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-server-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="3" y="4" width="18" height="8" rx="3"></rect><rect x="3" y="12" width="18" height="8" rx="3"></rect><line x1="7" y1="8" x2="7" y2="8.01"></line><line x1="7" y1="16" x2="7" y2="16.01"></line><path d="M11 8h6"></path><path d="M11 16h6"></path></svg>
         `,
       },
       {
         name: "数据统计",
+        level: 1,
         page: "statistics",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/chart-pie.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chart-pie" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -139,8 +151,9 @@ const navbar_list = [
       },
       {
         name: "刷流任务",
+        level: 1,
         page: "brushtask",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/checklist.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-checklist" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -153,8 +166,9 @@ const navbar_list = [
       },
       {
         name: "站点资源",
+        level: 1,
         page: "sitelist",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/cloud-computing.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-cloud-computing" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -169,11 +183,13 @@ const navbar_list = [
   },
   {
     name: "订阅管理",
+    level: 1,
     list: [
       {
         name: "电影订阅",
+        level: 1,
         page: "movie_rss",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/movie.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-movie" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -190,8 +206,9 @@ const navbar_list = [
       },
       {
         name: "电视剧订阅",
+        level: 1,
         page: "tv_rss",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/device-tv.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-tv" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -202,8 +219,9 @@ const navbar_list = [
       },
       {
         name: "自定义订阅",
+        level: 1,
         page: "user_rss",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/file-rss.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -217,8 +235,9 @@ const navbar_list = [
       },
       {
         name: "订阅日历",
+        level: 1,
         page: "rss_calendar",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/calendar.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -235,11 +254,13 @@ const navbar_list = [
   },
   {
     name: "下载管理",
+    level: 1,
     list: [
       {
         name: "正在下载",
+        level: 1,
         page: "downloading",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/loader.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -256,15 +277,17 @@ const navbar_list = [
       },
       {
         name: "近期下载",
+        level: 1,
         page: "downloaded",
-        icon: html`
+        icon: `
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"></path><polyline points="7 11 12 16 17 11"></polyline><line x1="12" y1="4" x2="12" y2="16"></line></svg>
         `,
       },
       {
         name: "自动删种",
+        level: 1,
         page: "torrent_remove",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/download-off.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download-off" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -279,11 +302,13 @@ const navbar_list = [
   },
   {
     name: "媒体整理",
+    level: 1,
     list: [
       {
         name: "文件管理",
+        level: 1,
         page: "mediafile",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/file-pencil.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-file-pencil" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -295,8 +320,9 @@ const navbar_list = [
       },
       {
         name: "手动识别",
+        level: 1,
         page: "unidentification",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/accessible.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-accessible" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -308,8 +334,9 @@ const navbar_list = [
       },
       {
         name: "历史记录",
+        level: 1,
         page: "history",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/history.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-history" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -320,8 +347,9 @@ const navbar_list = [
       },
       {
         name: "TMDB缓存",
+        level: 1,
         page: "tmdbcache",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/brand-headlessui.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-headlessui" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -334,26 +362,30 @@ const navbar_list = [
   },
   {
     name: "服务",
+    level: 1,
     page: "service",
-    icon: html`
+    icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-layout-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><rect x="4" y="4" width="6" height="5" rx="2"></rect><rect x="4" y="13" width="6" height="7" rx="2"></rect><rect x="14" y="4" width="6" height="7" rx="2"></rect><rect x="14" y="15" width="6" height="5" rx="2"></rect></svg>
     `,
   },
   {
     name: "系统设置",
+    level: 1,
     also: "设置",
     list: [
       {
         name: "基础设置",
+        level: 1,
         page: "basic",
-        icon: html`
+        icon: `
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z"></path><circle cx="12" cy="12" r="3"></circle></svg>
         `,
       },
       {
         name: "用户管理",
+        level: 1,
         page: "users",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/users.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -366,8 +398,9 @@ const navbar_list = [
       },
       {
         name: "媒体库",
+        level: 1,
         page: "library",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/stereo-glasses.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-stereo-glasses" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -381,8 +414,9 @@ const navbar_list = [
       },
       {
         name: "目录同步",
+        level: 1,
         page: "directorysync",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/refresh.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -393,8 +427,9 @@ const navbar_list = [
       },
       {
         name: "消息通知",
+        level: 1,
         page: "notification",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/bell.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -405,8 +440,9 @@ const navbar_list = [
       },
       {
         name: "过滤规则",
+        level: 1,
         page: "filterrule",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/filter.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-filter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -416,8 +452,9 @@ const navbar_list = [
       },
       {
         name: "自定义识别词",
+        level: 1,
         page: "customwords",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/a-b.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-a-b" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -429,8 +466,9 @@ const navbar_list = [
       },
       {
         name: "索引器",
+        level: 1,
         page: "indexer",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/list-search.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-list-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -444,8 +482,9 @@ const navbar_list = [
       },
       {
         name: "下载器",
+        level: 1,
         page: "downloader",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/download.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-download" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -457,8 +496,9 @@ const navbar_list = [
       },
       {
         name: "媒体服务器",
+        level: 1,
         page: "mediaserver",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/server-cog.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-server-cog" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -478,8 +518,9 @@ const navbar_list = [
       },
       {
         name: "字幕",
+        level: 1,
         page: "subtitle",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/badge-cc.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-badge-cc" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -491,8 +532,9 @@ const navbar_list = [
       },
       {
         name: "豆瓣",
+        level: 1,
         page: "douban",
-        icon: html`
+        icon: `
           <!-- https://tabler-icons.io/static/tabler-icons/icons-png/brand-douban.png -->
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-douban" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
