@@ -1286,6 +1286,9 @@ class Downloader:
         if not config or not dtype:
             return False
         # 测试状态
+        print("xxxxxxxxxx")
+        print(dtype)
+        print(config)
         state = self.__build_class(ctype=dtype, conf=config).get_status()
         if not state:
             log.error(f"【Downloader】下载器连接测试失败")

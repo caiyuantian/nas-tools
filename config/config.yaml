@@ -229,6 +229,27 @@ prowlarr:
   # 【Prowlarr ApiKey】：Prowlarr设置页面获取API Key
   api_key:
 
+# 配置 115 网盘下载器
+client115:
+  # 115 Cookie 抓包获取
+  cookie:
+
+# 配置Aria2下载器
+aria2:
+  # Aria2地址
+  host: 192.168.1.225
+  # Aria2 RPC端口
+  port: '6800'
+  # 密码令牌
+  secret: test
+pikpak:
+  # 用户名
+  username:
+  # 密码
+  password:
+  # 代理
+  proxy:
+  
 # 【配置豆瓣账号信息】：配置后会自动同步豆瓣收藏，豆瓣标记想看内容后，后台自动下载
 douban:
   # 【用户ID列表】：豆瓣电影点个我主页people后面的那一串数字，或者使用豆瓣App个人信息中查看。可以配置多个，注意要加引号

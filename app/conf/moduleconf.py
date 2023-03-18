@@ -611,6 +611,35 @@ class ModuleConf(object):
                     "placeholder": "password"
                 }
             }
+        },
+        "aria2": {
+            "name": "Aria2",
+            "img_url": "../static/img/downloader/aria2.png",
+            "monitor_enable": True,
+            "speedlimit_enable": True,
+            "config": {
+                "host": {
+                    "id": "aria2_host",
+                    "required": True,
+                    "title": "Aria2地址",
+                    "type": "text",
+                    "placeholder": "127.0.0.1"
+                },
+                "port": {
+                    "id": "aria2_port",
+                    "required": True,
+                    "title": "Aria2 RPC端口",
+                    "type": "text",
+                    "placeholder": "6800"
+                },
+                "secret": {
+                    "id": "aria2_secret",
+                    "required": False,
+                    "title": "密码令牌",
+                    "type": "text",
+                    "placeholder": ""
+                }
+            }
         }
     }
 
@@ -716,7 +745,7 @@ class ModuleConf(object):
     INDEXER_CONF = {
         "jackett": {
             "name": "Jackett",
-            "img_url": "./static/img/jackett.png",
+            "img_url": "./static/img/indexer/jackett.png",
             "background": "bg-black",
             "test_command": "app.indexer.client.jackett|Jackett",
             "config": {
@@ -748,7 +777,7 @@ class ModuleConf(object):
         },
         "prowlarr": {
             "name": "Prowlarr",
-            "img_url": "../static/img/prowlarr.png",
+            "img_url": "../static/img/indexer/prowlarr.png",
             "background": "bg-orange",
             "test_command": "app.indexer.client.prowlarr|Prowlarr",
             "config": {

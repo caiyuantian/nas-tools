@@ -7,11 +7,10 @@ from app.helper import IndexerConf
 
 
 class Prowlarr(_IIndexClient):
-    schema = "prowlarr"
     _client_config = {}
     index_type = IndexerType.PROWLARR.value
     # 索引器ID
-    client_id = "jackett"
+    client_id = "prowlarr"
     # 索引器类型
     client_type = IndexerType.PROWLARR
     # 索引器名称
@@ -37,7 +36,7 @@ class Prowlarr(_IIndexClient):
 
     @classmethod
     def match(cls, ctype):
-        return True if ctype in [cls.schema, cls.index_type] else False
+        return True if ctype in [cls.client_id, cls.index_type] else False
 
     def get_type(self):
         return self.client_type
