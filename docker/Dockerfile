@@ -19,16 +19,16 @@ RUN apk update  \
 ENV LANG="C.UTF-8" \
     TZ="Asia/Shanghai" \
     NASTOOL_CONFIG="/config/config.yaml" \
-    NASTOOL_AUTO_UPDATE=true \
-    NASTOOL_CN_UPDATE=true \
+    NASTOOL_AUTO_UPDATE=false \
+    NASTOOL_CN_UPDATE=false \
     NASTOOL_VERSION=master \
     PS1="\u@\h:\w \$ " \
     REPO_URL="https://github.com/NAStool/nas-tools.git" \
     PYPI_MIRROR="https://pypi.tuna.tsinghua.edu.cn/simple" \
     ALPINE_MIRROR="mirrors.ustc.edu.cn" \
-    PUID=0 \
-    PGID=0 \
-    UMASK=000 \
+    PUID=1000 \
+    PGID=1000 \
+    UMASK=022 \
     WORKDIR="/nas-tools"
 WORKDIR ${WORKDIR}
 RUN python_ver=$(python3 -V | awk '{print $2}') \
