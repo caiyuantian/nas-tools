@@ -11,8 +11,13 @@ from app.helper import IndexerConf
 class Jackett(_IIndexClient):
     schema = "jackett"
     _client_config = {}
-    index_type = IndexerType.JACKETT.value
     _password = None
+    # 索引器ID
+    client_id = "jackett"
+    # 索引器类型
+    client_type = IndexerType.JACKETT
+    # 索引器名称
+    client_name = IndexerType.JACKETT.value
 
     def __init__(self, config=None):
         super().__init__()
@@ -33,6 +38,9 @@ class Jackett(_IIndexClient):
                 if not self.host.endswith('/'):
                     self.host = self.host + "/"
 
+    def get_type(self):
+        return self.client_type
+
     def get_status(self):
         """
         检查连通性
@@ -44,7 +52,7 @@ class Jackett(_IIndexClient):
 
     @classmethod
     def match(cls, ctype):
-        return True if ctype in [cls.schema, cls.index_type] else False
+        return True if ctype in [cls.schema, cls.client_name] else False
 
     def get_indexers(self):
         """
